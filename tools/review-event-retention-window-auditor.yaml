@@ -1,0 +1,54 @@
+{
+  "name": "review-event-retention-window-auditor",
+  "description": "Run Event Retention Window Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "retention_days": {
+            "type": "number",
+            "description": "retention days"
+          },
+          "retention_purpose": {
+            "type": "string",
+            "description": "retention purpose"
+          },
+          "deletion_evidence": {
+            "type": "string",
+            "description": "deletion evidence"
+          }
+        },
+        "required": [
+          "retention_days",
+          "retention_purpose",
+          "deletion_evidence"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-event-retention-window-auditor.py",
+    "runtime": "python3"
+  }
+}

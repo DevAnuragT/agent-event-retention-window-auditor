@@ -1,0 +1,24 @@
+{
+  "slug": "event-retention-window-auditor",
+  "title": "Event Retention Window Auditor",
+  "category": "data-analytics",
+  "description": "Review event retention settings against documented purpose and deletion evidence.",
+  "fields": {
+    "retention_days": {
+      "label": "retention days",
+      "kind": "number",
+      "minimum": 1
+    },
+    "retention_purpose": {
+      "label": "retention purpose",
+      "kind": "text",
+      "minimum": 30
+    },
+    "deletion_evidence": {
+      "label": "deletion evidence",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

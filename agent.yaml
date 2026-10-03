@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: event-retention-window-auditor
+version: 0.1.0
+description: Review event retention settings against documented purpose and deletion evidence.
+skills:
+  - event-retention-window-auditor-skill
+tools:
+  - review-event-retention-window-auditor
+tags:
+  - data-analytics
+  - evidence-driven
